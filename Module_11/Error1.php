@@ -97,7 +97,7 @@
         } */
 
 
-        
+
 
     //  User Error**************************************
 
@@ -106,3 +106,12 @@
         trigger_error("One does not equal two!", E_USER_NOTICE);
         }
         } */
+
+        try{
+            if ($_SERVER["REQUEST_METHOD"] == "GET") {
+                include("non_existent_file.php");
+                echo "Hello";
+                }
+        }catch(Exception $e){
+            echo $e;
+        }
