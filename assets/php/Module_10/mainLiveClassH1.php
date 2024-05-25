@@ -1,8 +1,8 @@
 <?php
 // Date Time
-
+date_default_timezone_set("Asia/Dhaka");
 $date=strtotime("now");
-echo date("Y-m-d H:i:s",$date);
+echo date("Y, dS M h:i:s",$date);
 
 
 echo "\n";
