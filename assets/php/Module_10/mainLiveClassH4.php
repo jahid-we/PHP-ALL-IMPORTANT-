@@ -1,6 +1,6 @@
 <?php
 $date = new DateTime('now', new DateTimeZone('Asia/Dhaka'));
-echo $date->format('Y-m-d g:i:s a');
+echo $date->format('Y-m-d h:i:s a');
 
 echo "\n";
 echo "\n";
@@ -13,7 +13,7 @@ echo "\n";
 
 // data From TimeStamp
 $date1 = new DateTime('@' . $timeStamp);
-echo $date1->format('Y-m-d g:i:s a');
+echo $date1->format('Y, dS M h:i:s a');
 
 echo "\n";
 echo "\n";
@@ -25,10 +25,10 @@ echo "\n";
 echo "\n";
 
 $date->add(new DateInterval('P5Y5M5D'));
-echo $date->format('Y-m-d g:i:s a');
+echo $date->format('Y, dS M h:i:s a');
 
 echo "\n";
 echo "\n";
 
 $date->sub(new DateInterval('P2Y5M5D'));
-echo $date->format('Y-m-d g:i:s a');
+echo $date->format('Y, dS M h:i:s a');
