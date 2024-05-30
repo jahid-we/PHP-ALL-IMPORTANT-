@@ -1,0 +1,13 @@
+CREATE TABLE `products`(
+`id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`user_id` BIGINT(20) UNSIGNED NOT NULL,
+`category_id` BIGINT(20) UNSIGNED NOT NULL,
+`name` VARCHAR(20) NOT NULL,
+`price`VARCHAR(20) NOT NULL,
+`unit` VARCHAR(20) NOT NULL,
+`img_url` VARCHAR(255) NOT NULL,
+`created_at` TIMESTAMP NOT NULL DEFAULT current_timestamp(),
+`updated_at` TIMESTAMP NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+FOREIGN KEY(`user_id`) REFERENCES `users`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE,  
+FOREIGN KEY(`category_id`) REFERENCES `categories`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE  
+)
