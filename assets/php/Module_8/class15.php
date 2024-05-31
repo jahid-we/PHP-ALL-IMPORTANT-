@@ -7,7 +7,7 @@ if (in_array(29, $random, true)) {
     echo "No \n";
 };
 
-$offset=array_search(29, $random, true);
+$offset=array_search(15, $random, true);
 echo $offset;
 
 if(key_exists('b',$fruits)){
